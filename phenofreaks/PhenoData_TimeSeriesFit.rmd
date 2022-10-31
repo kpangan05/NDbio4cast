@@ -13,8 +13,8 @@ The packages bellow are necessary to visualize phenology data. Comment lines add
 #install.packages("tidyr")
 #install.packageS("dplyr")
 #install.packageS("rjags")
-install.packages("rnoaa")
-install.packages("daymetr")
+#install.packages("rnoaa")
+#install.packages("daymetr")
 
 library(readr)
 library(ggplot2)
@@ -86,9 +86,8 @@ Code derived from exercise six of the Ecological Forecasting
 levels(as.factor(Pheno_decid$site_id))
 GRSM_pheno = NeonPheno %>% filter(site_id=="GRSM")
 time = (subset(GRSM_pheno, GRSM_pheno$variable == 'gcc_90'))$datetime
-time
 y = (subset(GRSM_pheno, GRSM_pheno$variable == 'gcc_90'))$observation
-y
+
 
 #define model
 RandomWalk = "
